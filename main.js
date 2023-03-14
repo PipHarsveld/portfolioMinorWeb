@@ -1,3 +1,8 @@
-import getRepositories from './modules/api.js'
+// Import modules
+import router from './modules/router.js';
 
-getRepositories();
+async function loadPage() {
+  router();
+}
+
+loadPage();
