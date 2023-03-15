@@ -15,6 +15,11 @@ async function router() {
         const repos = await api.getRepositories();
         render.renderHome(repos);
         break;
+        case "topleft":
+        display.textContent = "Topleft";
+        console.log(hash);
+        console.log("Yay");
+        break;
     }
   };
 

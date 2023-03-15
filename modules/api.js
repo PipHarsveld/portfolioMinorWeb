@@ -6,13 +6,36 @@ async function getRepositories() {
   
       if (response.status >= 200 && response.status <= 299) {
         const data = await response.json();
-        const newArray = data.map((repo) => {
+        const repoArray = data.map((repo) => {
           return {
             name: repo.name,
+            link: repo.html_url,
             description: repo.description,
           };
         });
-        return newArray;
+        return repoArray;
+      } else {
+        return "error";
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getUserInfo() {
+    try {
+      const url = "https://api.github.com/users/PipHarsveld";
+      const response = await fetch(url);
+  
+      if (response.status >= 200 && response.status <= 299) {
+        const data = await response.json();
+        const InfoArray = data.map((info) => {
+          return {
+            avatar: info.avatar_url,
+            bio: info.bio,
+          };
+        });
+        return InfoArray;
       } else {
         return "error";
       }
@@ -22,9 +45,9 @@ async function getRepositories() {
   }
 
 
-
 //Export modules
 export default {
-    getRepositories
+    getRepositories,
+    getUserInfo,
   }
   
