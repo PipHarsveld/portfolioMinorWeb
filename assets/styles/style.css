@@ -269,7 +269,9 @@ nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
 /********************/
 /* Shelf 6, contact */
 /********************/
-
+nav>a:nth-of-type(6)>section>img{
+  width: 2rem;
+}
 
 
 
