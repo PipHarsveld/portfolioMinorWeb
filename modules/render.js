@@ -72,7 +72,7 @@ async function renderTopRight() {
   display.textContent = "";
   const container = document.querySelector("main");
   container.innerHTML = `
-    <div class="topLeft">
+    <div class="topRight">
       <section>
         <div>
           <div></div>
@@ -102,7 +102,93 @@ async function renderTopRight() {
       const name = document.createElement("p");
       name.textContent = repo.name;
       if (index < 5) {
-        // display the first 5 repositories on the 4th shelf
+        // display the first 5 repositories
+        container.appendChild(name); 
+      } else {
+        // do nothing when index is greater than or equal to 5
+      }
+    });
+  }
+}
+
+
+async function renderBottomLeft() {
+  // Remove loading state
+  display.textContent = "";
+  const container = document.querySelector("main");
+  container.innerHTML = `
+    <div class="bottomLeft">
+      <section>
+        <div></div>
+      </section>
+
+      <section>
+        <div></div>
+      </section>
+    </div>
+  `;
+
+  const repos = await api.getRepositories(); // add this line to get the repositories
+
+  const info = await api.getUserInfo();
+  if (info === "error") {
+    display.textContent = "Something went wrong, please reload the page!";
+    return false;
+  } else {
+    const container = document.querySelector(".bottomLeft>section:nth-of-type(2)>div");
+    // Loop through each repository and create a new article element
+    repos.forEach((repo, index) => {
+      const name = document.createElement("p");
+      name.textContent = repo.name;
+      if (index < 5) {
+        // do nothing when index is lower than 5
+      } else {
+        // display the last 4 repositories
+        container.appendChild(name); 
+      }
+    });
+  }
+}
+
+
+async function renderBottomRight() {
+  // Remove loading state
+  display.textContent = "";
+  const container = document.querySelector("main");
+  container.innerHTML = `
+    <div class="bottomRight">
+      <section>
+        <div></div>
+      </section>
+
+      <section>
+        <section>
+          <img src="./assets/images/linkedin.png" alt="Check my LinkedIn!">
+          <div>
+            <img src="./assets/images/mail.png" alt="Mail me!">
+            <img src="./assets/images/telephone.png" alt="Call me!">
+          </div>
+        </section>
+
+        <div></div>
+      </section>
+    </div>
+  `;
+
+  const repos = await api.getRepositories(); // add this line to get the repositories
+
+  const info = await api.getUserInfo();
+  if (info === "error") {
+    display.textContent = "Something went wrong, please reload the page!";
+    return false;
+  } else {
+    const container = document.querySelector(".bottomRight>section:nth-of-type(2)>div");
+    // Loop through each repository and create a new article element
+    repos.forEach((repo, index) => {
+      const name = document.createElement("p");
+      name.textContent = repo.name;
+      if (index < 5) {
+        // display the first 5 repositories
         container.appendChild(name); 
       } else {
         // do nothing when index is greater than or equal to 5
@@ -115,4 +201,6 @@ export default {
   renderHome,
   renderTopLeft,
   renderTopRight,
+  renderBottomLeft,
+  renderBottomRight,
 };
