@@ -22,27 +22,24 @@ async function getRepositories() {
     }
   }
 
-  async function getUserInfo() {
-    try {
-      const url = "https://api.github.com/users/PipHarsveld";
-      const response = await fetch(url);
-  
-      if (response.status >= 200 && response.status <= 299) {
-        const data = await response.json();
-        const InfoArray = data.map((info) => {
-          return {
-            avatar: info.avatar_url,
-            bio: info.bio,
-          };
-        });
-        return InfoArray;
-      } else {
-        return "error";
-      }
-    } catch (error) {
-      console.log(error);
+async function getUserInfo() {
+  try {
+    const url = "https://api.github.com/users/PipHarsveld";
+    const response = await fetch(url);
+
+    if (response.status >= 200 && response.status <= 299) {
+      const data = await response.json();
+      return {
+        avatar: data.avatar_url,
+        bio: data.bio,
+      };
+    } else {
+      return "error";
     }
+  } catch (error) {
+    console.log(error);
   }
+}
 
 
 //Export modules

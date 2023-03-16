@@ -1,30 +1,28 @@
-// Import modules
 import render from "./render.js";
 import api from "./api.js";
 
 async function router() {
-    // Check hash
-    const hash = window.location.hash.slice(1);
-  
-    const display = document.querySelector('main');
-  
-    switch (hash) {
-      //If hash = empty
-      case "":
-        display.textContent = "Welkom!";
-        const repos = await api.getRepositories();
-        render.renderHome(repos);
-        break;
-        case "topleft":
-        display.textContent = "Topleft";
-        console.log(hash);
-        console.log("Yay");
-        break;
-    }
-  };
+  // Check hash
+  const hash = window.location.hash.slice(1);
 
-//Call the router funtion when the hash is changed
-window.addEventListener('hashchange', router);
+  const display = document.querySelector("main");
 
-//Export modules
+  switch (hash) {
+    //If hash = empty
+    case "":
+      display.textContent = "Welkom!";
+      const repos = await api.getRepositories();
+      render.renderHome(repos);
+      break;
+    case "topleft":
+      display.textContent = "Topleft";
+      console.log(hash);
+      console.log("Yay");
+      break;
+  }
+}
+
+//Call the router function when the hash is changed
+window.addEventListener("hashchange", router);
+
 export default router;

@@ -1,35 +1,35 @@
-// Import modules
-import api from "./api.js"
+import api from "./api.js";
 
 const display = document.querySelector("main");
-const container = document.querySelector("main>nav>a:nth-of-type(4)");
+const shelf3 = document.querySelector("main>nav>a:nth-of-type(3)");
+const shelf4 = document.querySelector("main>nav>a:nth-of-type(4)");
 const nav = document.querySelector("main>nav");
 
+async function renderHome(repos) {
+  // Remove loading state
+  display.textContent = "";
 
+  const info = await api.getUserInfo();
+  if (info === "error") {
+    display.textContent = "Something went wrong, please reload the page!";
+    return false;
+  } else {
+    // Loop through each repository and create a new article element
+    repos.forEach((repo) => {
+      const name = document.createElement("p");
+      name.textContent = repo.name;
+      console.log(name);
+      shelf4.appendChild(name);
+    });
 
-function renderHome(data = []) {
-    // Remove loading state
-    display.textContent = "";
+    const image = document.createElement("img");
+    image.src = info.avatar;
+    shelf3.appendChild(image);
 
-    if (data === "error") {
-        display.textContent = "Something went wrong, please reload the page!";
-        return false;
-    } else {
-        console.log(container);
-
-        // Loop through each repository and create a new article element
-        data.forEach((repo) => {
-            const name = document.createElement("p");
-            name.textContent = repo.name;
-            console.log(name);
-            container.appendChild(name);
-        });
-
-        display.appendChild(nav);
-    }
+    display.appendChild(nav);
+  }
 }
 
-//Export modules
 export default {
-    renderHome,
-}
+  renderHome,
+};
