@@ -39,6 +39,11 @@ li {
   list-style-type: none;
 }
 
+p{
+  font-weight: 600;
+  font-size: .9rem;
+}
+
 
 /*********************/
 /* Custom properties */
@@ -63,7 +68,7 @@ li {
 /************/
 nav {
   background-color: var(--color-bookcase);
-  height: 65vh;
+  height: 68vh;
   width: 85vw;
   margin: auto;
   margin-top: 10vh;
@@ -248,22 +253,44 @@ nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
 /******************/
 /* Shelf 3, photo */
 /******************/
+nav>a:nth-of-type(3)>div:nth-of-type(2){
+  background-color: var(--color-beige);
+  height: 60%;
+  width: fit-content;
+  padding: .5rem;
+  position: absolute;
+  bottom: -.15rem;
+  left: 2rem;
+  transform: rotate(-4deg);
+  border-radius: .3rem;
+}
 
+nav>a:nth-of-type(3)>div:nth-of-type(2)>img{
+  background-color: var(--color-white);
+  height: 100%;
+  border-radius: .3rem;
+  padding: .3rem 0;
+}
 
 
 
 
 /************************/
-/* Shelf 4, repos pt. 1 */
+/* Shelf 4 and 5, repos */
 /************************/
+/* nav>a:nth-of-type(4)>section, nav>a:nth-of-type(5)>section{
+  height: 100%;
+  width: 100%;
+  display: flex;
 
+}
 
-
-
-/************************/
-/* Shelf 5, repos pt. 2 */
-/************************/
-
+nav>a:nth-of-type(4)>section>p, nav>a:nth-of-type(5)>section>p{
+  transform: rotate(-90deg);
+  width: max-content;
+  height: max-content;
+  background-color: lightslategray;
+} */
 
 
 
