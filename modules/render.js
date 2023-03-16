@@ -66,6 +66,7 @@ async function renderTopLeft() {
         </div>
         <div class="foreground"></div>
       </section>
+
       <section>
         <div class="foreground"></div>
       </section>
@@ -94,11 +95,11 @@ async function renderTopRight() {
           <div></div>
         </div>
 
-        <div></div>
+        <div class="foreground"></div>
       </section>
 
       <section>
-        <div></div>
+        <div class="foreground"></div>
       </section>
     </div>
   `;

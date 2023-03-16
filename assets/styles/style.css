@@ -454,7 +454,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 /************************/
 /* Styling page TopLeft */
 /************************/
-.topLeft{
+.topLeft, .topRight{
   background-color: var(--color-bookcase);
   height: 100vh;
   width: 100vw;
@@ -469,7 +469,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 
 /* Shelfs */
 /**********/
-.topLeft>section {
+.topLeft>section, .topRight>section {
   background-color: var(--color-shelf-background);
   height: 16rem;
   width: 16rem;
@@ -543,3 +543,104 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   padding: .3rem 0;
 }
 
+
+
+
+/* Shelf 2, plant */
+/******************/
+.topRight>section:first-of-type>div:first-of-type {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  scale: 2;
+  left: -7rem;
+  bottom: 8rem;
+}
+
+.topRight>section:first-of-type>div:first-of-type>div {
+  position: absolute;
+}
+
+/* Plantenpot rand */
+.topRight>section:first-of-type>div:first-of-type>div:last-of-type {
+  height: .7rem;
+  width: 4rem;
+  border-radius: 1rem;
+  background-color: var(--color-beige);
+  display: flex;
+  justify-content: center;
+  bottom: 2.3rem;
+  right: 2.3rem;
+}
+
+/* Plantenpot bakje*/
+.topRight>section:first-of-type>div:first-of-type>div:last-of-type::after {
+  content: "";
+  display: inline-block;
+  height: 3rem;
+  width: 3.2rem;
+  background-color: var(--color-beige);
+  border-radius: .5rem;
+  z-index: 0;
+}
+
+/* Stam cactus */
+.topRight>section:first-of-type>div:first-of-type>div:last-of-type::before {
+  content: "";
+  display: inline-block;
+  height: 4.5rem;
+  width: 1.8rem;
+  background-color: var(--color-green);
+  border-radius: .7rem;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+/* Takje links horizontaal */
+.topRight>section:first-of-type>div:first-of-type>div:first-of-type {
+  height: .7rem;
+  width: 1.7rem;
+  border-radius: 1rem;
+  background-color: var(--color-green);
+  bottom: 3.6rem;
+  right: 4.6rem;
+}
+
+/* Takje links verticaal */
+.topRight>section:first-of-type>div:first-of-type>div:first-of-type::after {
+  content: "";
+  display: block;
+  height: 2.2rem;
+  width: .7rem;
+  border-radius: 1rem;
+  background-color: var(--color-green);
+  position: absolute;
+  bottom: 0rem;
+}
+
+/* Takje rechts horizontaal */
+.topRight>section:first-of-type>div:first-of-type>div:nth-of-type(2) {
+  height: .7rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-green);
+  bottom: 4.8rem;
+  right: 2.3rem;
+}
+
+/* Takje rechts verticaal */
+.topRight>section:first-of-type>div:first-of-type>div:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  height: 2rem;
+  width: .7rem;
+  border-radius: 1rem;
+  background-color: var(--color-green);
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}
