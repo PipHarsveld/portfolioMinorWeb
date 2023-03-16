@@ -49,12 +49,18 @@ async function renderHome(repos) {
 async function renderTopLeft() {
   // Remove loading state
   display.textContent = "";
-  const container = document.querySelector("main");
-  container.innerHTML = `
+
+  const info = await api.getUserInfo();
+  if (info === "error") {
+    display.textContent = "Something went wrong, please reload the page!";
+    return false;
+  } else {
+
+    display.innerHTML = `
     <div class="topLeft">
       <section>
         <div>
-          <p>Pip Harsveld</p>
+          <a href="https://github.com/PipHarsveld">Pip Harsveld</a>
           <p>Uitgeest</p>
           <p>CMD student</p>
         </div>
@@ -65,6 +71,14 @@ async function renderTopLeft() {
       </section>
     </div>
   `;
+
+    const container = document.querySelector("div>section:nth-of-type(2)");
+    const image = document.createElement("img");
+    const pictureFrame = document.createElement("div");
+    image.src = info.avatar;
+    pictureFrame.appendChild(image);
+    container.appendChild(pictureFrame);
+  }
 }
 
 async function renderTopRight() {
@@ -103,7 +117,7 @@ async function renderTopRight() {
       name.textContent = repo.name;
       if (index < 5) {
         // display the first 5 repositories
-        container.appendChild(name); 
+        container.appendChild(name);
       } else {
         // do nothing when index is greater than or equal to 5
       }
@@ -144,7 +158,7 @@ async function renderBottomLeft() {
         // do nothing when index is lower than 5
       } else {
         // display the last 4 repositories
-        container.appendChild(name); 
+        container.appendChild(name);
       }
     });
   }
@@ -189,7 +203,7 @@ async function renderBottomRight() {
       name.textContent = repo.name;
       if (index < 5) {
         // display the first 5 repositories
-        container.appendChild(name); 
+        container.appendChild(name);
       } else {
         // do nothing when index is greater than or equal to 5
       }
