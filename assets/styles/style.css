@@ -409,6 +409,26 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 /****************/
 /* Mediaqueries */
 /****************/
+@media(max-width: 415px) {
+  nav {
+    height: 31rem;
+    width: 21rem;
+  }
+  
+  nav>a {
+    background-color: var(--color-shelf-background);
+    height: 8rem;
+    width: 8rem;
+  }
+
+  nav>div:nth-of-type(2) {
+    left: 6rem;
+}
+
+
+}
+
+
 @media(min-width: 900px) {
   nav {
     display: grid;
