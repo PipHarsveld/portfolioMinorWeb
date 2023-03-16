@@ -61,7 +61,7 @@ li {
 /************/
 /* Bookcase */
 /************/
-main>nav {
+nav {
   background-color: var(--color-bookcase);
   height: 65vh;
   width: 85vw;
@@ -71,16 +71,16 @@ main>nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10%;
-  grid-row-gap: 5%;
-  padding: 7vw;
+  grid-column-gap: 6%;
+  grid-row-gap: 4%;
+  padding: 6vw;
 }
 
 
 /**********/
 /* Shelfs */
 /**********/
-main>nav>a {
+nav>a {
   background-color: var(--color-shelf-background);
   height: 100%;
   width: 100%;
@@ -112,16 +112,44 @@ main>nav>a {
 /*********************/
 /* Shelf 1, about me */
 /*********************/
+nav>a:first-of-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
+nav>a:first-of-type>div:first-of-type>p{
+  width: fit-content;
+  padding: .1rem .5rem;
+  border-radius: .2rem;
+  position: relative;
+}
 
+/* Book top */
+nav>a:first-of-type>div:first-of-type>p:first-of-type{
+  background-color: var(--color-green);
+  left: 1.5rem;
+}
 
+/* Book middle */
+nav>a:first-of-type>div:first-of-type>p:nth-of-type(2){
+  background-color: var(--color-pink);
+  padding: .1rem 1.5rem;
+  left: .4rem;
+}
 
+/* Book bottom */
+nav>a:first-of-type>div:first-of-type>p:nth-of-type(3){
+  background-color: var(--color-blue);
+  padding: .1rem 1rem;
+  left: 1rem;
+}
 
 
 /******************/
 /* Shelf 2, plant */
 /******************/
-main>nav>a:nth-of-type(2)>div:first-of-type {
+nav>a:nth-of-type(2)>div:first-of-type {
   height: 100%;
   width: 100%;
   position: relative;
@@ -130,12 +158,12 @@ main>nav>a:nth-of-type(2)>div:first-of-type {
   justify-content: center;
 }
 
-main>nav>a:nth-of-type(2)>div:first-of-type>div {
+nav>a:nth-of-type(2)>div:first-of-type>div {
   position: absolute;
 }
 
 /* Plantenpot rand */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type {
+nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type {
   height: .7rem;
   width: 4rem;
   border-radius: 1rem;
@@ -146,7 +174,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type {
 }
 
 /* Plantenpot bakje*/
-main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::after {
+nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::after {
   content: "";
   display: inline-block;
   height: 3rem;
@@ -157,7 +185,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::after {
 }
 
 /* Stam cactus */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::before {
+nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::before {
   content: "";
   display: inline-block;
   height: 5rem;
@@ -170,7 +198,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:last-of-type::before {
 }
 
 /* Takje links horizontaal */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type {
+nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type {
   height: .9rem;
   width: 2rem;
   border-radius: 1rem;
@@ -180,7 +208,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type {
 }
 
 /* Takje links verticaal */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type::after {
+nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type::after {
   content: "";
   display: block;
   height: 2.5rem;
@@ -192,7 +220,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:first-of-type::after {
 }
 
 /* Takje rechts horizontaal */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) {
+nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) {
   height: .9rem;
   width: 2rem;
   border-radius: 1rem;
@@ -202,7 +230,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2) {
 }
 
 /* Takje rechts verticaal */
-main>nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
+nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
   content: "";
   display: block;
   height: 2.5rem;
@@ -252,7 +280,7 @@ main>nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
 /****************/
 
 @media(min-width: 1024px) {
-  main>nav {
+  nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
