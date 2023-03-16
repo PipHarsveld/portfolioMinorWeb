@@ -81,6 +81,36 @@ nav {
   padding: 6vw;
 }
 
+/* Left leg */
+nav::before{
+  content: "";
+  background-color: var(--color-shelf-background);
+  height: 4rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(15deg);
+  left: 20%;
+  bottom: 16%;
+  z-index: -2;
+}
+
+/* Right leg */
+nav::after{
+  content: "";
+  background-color: var(--color-shelf-background);
+  height: 4rem;
+  width: 1.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-15deg);
+  right: 20%;
+  bottom: 16%;
+  z-index: -2;
+}
+
 
 /**********/
 /* Shelfs */
