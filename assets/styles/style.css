@@ -92,7 +92,7 @@ nav::before{
   bottom: 0;
   transform: rotate(15deg);
   left: 20%;
-  bottom: 15%;
+  bottom: 12%;
   z-index: -2;
 }
 
@@ -107,7 +107,7 @@ nav::after{
   bottom: 0;
   transform: rotate(-15deg);
   right: 20%;
-  bottom: 15%;
+  bottom: 12%;
   z-index: -2;
 }
 
