@@ -64,10 +64,10 @@ async function renderTopLeft() {
           <p>Uitgeest</p>
           <p>CMD student</p>
         </div>
-        <div></div>
+        <div class="foreground"></div>
       </section>
       <section>
-        <div></div>
+        <div class="foreground"></div>
       </section>
     </div>
   `;
