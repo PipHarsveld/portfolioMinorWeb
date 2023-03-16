@@ -293,7 +293,7 @@ nav>a:nth-of-type(3)>div:nth-of-type(2) {
   position: absolute;
   bottom: -.15rem;
   left: 2rem;
-  transform: rotate(-4deg);
+  transform: skew(4deg);
   border-radius: .3rem;
 }
 
@@ -326,23 +326,28 @@ nav>a:nth-of-type(5)>section>p {
 }
 
 
-nav>a:nth-of-type(4)>section>p:first-of-type, nav>a:nth-of-type(4)>section>p:nth-of-type(5), nav>a:nth-of-type(5)>section>p:nth-of-type(2){
+nav>a:nth-of-type(4)>section>p:first-of-type,
+nav>a:nth-of-type(4)>section>p:nth-of-type(5),
+nav>a:nth-of-type(5)>section>p:nth-of-type(2) {
   background-color: var(--color-yellow);
 }
 
-nav>a:nth-of-type(4)>section>p:nth-of-type(2), nav>a:nth-of-type(5)>section>p:nth-of-type(4){
+nav>a:nth-of-type(4)>section>p:nth-of-type(2),
+nav>a:nth-of-type(5)>section>p:nth-of-type(4) {
   background-color: var(--color-pink);
 }
 
-nav>a:nth-of-type(4)>section>p:nth-of-type(3), nav>a:nth-of-type(5)>section>p:nth-of-type(3){
+nav>a:nth-of-type(4)>section>p:nth-of-type(3),
+nav>a:nth-of-type(5)>section>p:nth-of-type(3) {
   background-color: var(--color-blue);
 }
 
-nav>a:nth-of-type(4)>section>p:nth-of-type(4), nav>a:nth-of-type(5)>section>p:first-of-type{
+nav>a:nth-of-type(4)>section>p:nth-of-type(4),
+nav>a:nth-of-type(5)>section>p:first-of-type {
   background-color: var(--color-green);
 }
 
-nav>a:nth-of-type(4)>section>p:nth-of-type(3){
+nav>a:nth-of-type(4)>section>p:nth-of-type(3) {
   transform: rotate(-10deg);
   margin-top: .5rem;
   margin-bottom: 1.2rem;
@@ -354,8 +359,41 @@ nav>a:nth-of-type(4)>section>p:nth-of-type(3){
 /********************/
 /* Shelf 6, contact */
 /********************/
+nav>a:nth-of-type(6) {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+nav>a:nth-of-type(6)>section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icons */
+nav>a:nth-of-type(6)>section>img,
+nav>a:nth-of-type(6)>section>div>img {
+  width: 2.7rem;
+  padding: .5rem;
+  border-radius: .3rem;
+}
+
+nav>a:nth-of-type(6)>section>div {
+  display: flex;
+}
+
 nav>a:nth-of-type(6)>section>img {
-  width: 2rem;
+  background-color: var(--color-blue);
+}
+
+nav>a:nth-of-type(6)>section>div>img:first-of-type {
+  background-color: var(--color-green);
+  margin-right: .2rem;
+}
+
+nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
+  background-color: var(--color-pink);
 }
 
 
@@ -365,7 +403,6 @@ nav>a:nth-of-type(6)>section>img {
 /****************/
 /* Mediaqueries */
 /****************/
-
 @media(min-width: 900px) {
   nav {
     display: grid;
