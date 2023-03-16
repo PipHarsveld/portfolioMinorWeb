@@ -39,7 +39,7 @@ li {
   list-style-type: none;
 }
 
-p{
+p {
   font-weight: 600;
   font-size: .9rem;
 }
@@ -68,8 +68,8 @@ p{
 /************/
 nav {
   background-color: var(--color-bookcase);
-  height: 68vh;
-  width: 85vw;
+  height: 38rem;
+  width: 25rem;
   margin: auto;
   margin-top: 10vh;
   border-radius: 1rem;
@@ -77,38 +77,34 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 6%;
-  grid-row-gap: 4%;
-  padding: 6vw;
+  padding: 2rem;
 }
 
 /* Left leg */
-nav::before{
+nav>div:first-of-type {
   content: "";
   background-color: var(--color-shelf-background);
   height: 5rem;
   width: 1.5rem;
   border-radius: 1rem;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
   transform: rotate(15deg);
-  left: 20%;
-  bottom: 12%;
+  position: relative;
   z-index: -2;
+  left: .7rem;
 }
 
 /* Right leg */
-nav::after{
+nav>div:nth-of-type(2) {
   content: "";
   background-color: var(--color-shelf-background);
   height: 5rem;
   width: 1.5rem;
   border-radius: 1rem;
-  position: absolute;
-  bottom: 0;
   transform: rotate(-15deg);
-  right: 20%;
-  bottom: 12%;
+  position: relative;
   z-index: -2;
+  left: 8rem;
 }
 
 
@@ -117,8 +113,8 @@ nav::after{
 /**********/
 nav>a {
   background-color: var(--color-shelf-background);
-  height: 100%;
-  width: 100%;
+  height: 10rem;
+  width: 10rem;
   margin: auto;
   border-radius: .7rem;
   position: relative;
@@ -126,6 +122,12 @@ nav>a {
   overflow: hidden;
   text-decoration: none;
   color: black;
+  margin-bottom: 20%;
+}
+
+nav>a:nth-of-type(5),
+nav>a:nth-of-type(6) {
+  margin-bottom: 0;
 }
 
 /***************************/
@@ -147,13 +149,13 @@ nav>a {
 /*********************/
 /* Shelf 1, about me */
 /*********************/
-nav>a:first-of-type{
+nav>a:first-of-type {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-nav>a:first-of-type>div:first-of-type>p{
+nav>a:first-of-type>div:first-of-type>p {
   width: fit-content;
   padding: .1rem .5rem;
   border-radius: .2rem;
@@ -161,20 +163,20 @@ nav>a:first-of-type>div:first-of-type>p{
 }
 
 /* Book top */
-nav>a:first-of-type>div:first-of-type>p:first-of-type{
+nav>a:first-of-type>div:first-of-type>p:first-of-type {
   background-color: var(--color-green);
   left: 1.5rem;
 }
 
 /* Book middle */
-nav>a:first-of-type>div:first-of-type>p:nth-of-type(2){
+nav>a:first-of-type>div:first-of-type>p:nth-of-type(2) {
   background-color: var(--color-pink);
   padding: .1rem 1.5rem;
   left: .4rem;
 }
 
 /* Book bottom */
-nav>a:first-of-type>div:first-of-type>p:nth-of-type(3){
+nav>a:first-of-type>div:first-of-type>p:nth-of-type(3) {
   background-color: var(--color-blue);
   padding: .1rem 1rem;
   left: 1rem;
@@ -283,7 +285,7 @@ nav>a:nth-of-type(2)>div:first-of-type>div:nth-of-type(2)::after {
 /******************/
 /* Shelf 3, photo */
 /******************/
-nav>a:nth-of-type(3)>div:nth-of-type(2){
+nav>a:nth-of-type(3)>div:nth-of-type(2) {
   background-color: var(--color-beige);
   height: 60%;
   width: fit-content;
@@ -295,7 +297,7 @@ nav>a:nth-of-type(3)>div:nth-of-type(2){
   border-radius: .3rem;
 }
 
-nav>a:nth-of-type(3)>div:nth-of-type(2)>img{
+nav>a:nth-of-type(3)>div:nth-of-type(2)>img {
   background-color: var(--color-white);
   height: 100%;
   border-radius: .3rem;
@@ -308,26 +310,25 @@ nav>a:nth-of-type(3)>div:nth-of-type(2)>img{
 /************************/
 /* Shelf 4 and 5, repos */
 /************************/
-/* nav>a:nth-of-type(4)>section, nav>a:nth-of-type(5)>section{
+nav>a:nth-of-type(4)>section,
+nav>a:nth-of-type(5)>section {
   height: 100%;
   width: 100%;
-  display: flex;
-
+  transform: rotate(-90deg);
 }
 
-nav>a:nth-of-type(4)>section>p, nav>a:nth-of-type(5)>section>p{
-  transform: rotate(-90deg);
-  width: max-content;
-  height: max-content;
+nav>a:nth-of-type(4)>section>p,
+nav>a:nth-of-type(5)>section>p {
+  width: fit-content;
   background-color: lightslategray;
-} */
+}
 
 
 
 /********************/
 /* Shelf 6, contact */
 /********************/
-nav>a:nth-of-type(6)>section>img{
+nav>a:nth-of-type(6)>section>img {
   width: 2rem;
 }
 
@@ -339,10 +340,21 @@ nav>a:nth-of-type(6)>section>img{
 /* Mediaqueries */
 /****************/
 
-@media(min-width: 1024px) {
+@media(min-width: 900px) {
   nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    height: 26rem;
+    width: 38rem;
+  }
+
+  nav>a:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+
+  /* Right leg */
+  nav>div:nth-of-type(2) {
+    left: 20rem;
   }
 }
