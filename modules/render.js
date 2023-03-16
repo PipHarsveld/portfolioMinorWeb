@@ -111,14 +111,16 @@ async function renderTopRight() {
     display.textContent = "Something went wrong, please reload the page!";
     return false;
   } else {
-    const container = document.querySelector(".topLeft>section:nth-of-type(2)>div");
+    const container = document.querySelector(".topRight>section:nth-of-type(2)");
+    const section = document.createElement("section");
     // Loop through each repository and create a new article element
     repos.forEach((repo, index) => {
       const name = document.createElement("p");
       name.textContent = repo.name;
       if (index < 5) {
         // display the first 5 repositories
-        container.appendChild(name);
+        section.appendChild(name);
+        container.appendChild(section);
       } else {
         // do nothing when index is greater than or equal to 5
       }
