@@ -25,13 +25,15 @@ async function renderHome(repos) {
       if (index < 5) {
         // display the first 5 repositories on the 4th shelf
         container1.appendChild(name);
-        shelf4.appendChild(container1);
       } else {
         // display the next 4 repositories on the 5th shelf
         container2.appendChild(name);
-        shelf5.appendChild(container2);
       }
     });
+
+    // Append containers to shelves
+    shelf4.appendChild(container1);
+    shelf5.appendChild(container2);
 
     const image = document.createElement("img");
     const pictureFrame = document.createElement("div");
@@ -65,7 +67,7 @@ async function renderTopLeft() {
   `;
 }
 
-async function renderTopRight(repos) {
+async function renderTopRight() {
   // Remove loading state
   display.textContent = "";
   const container = document.querySelector("main");
@@ -87,6 +89,8 @@ async function renderTopRight(repos) {
     </div>
   `;
 
+  const repos = await api.getRepositories(); // add this line to get the repositories
+
   const info = await api.getUserInfo();
   if (info === "error") {
     display.textContent = "Something went wrong, please reload the page!";
@@ -101,7 +105,7 @@ async function renderTopRight(repos) {
         // display the first 5 repositories on the 4th shelf
         container.appendChild(name); 
       } else {
-        console.log("Something went wrong");
+        // do nothing when index is greater than or equal to 5
       }
     });
   }

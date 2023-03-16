@@ -16,20 +16,20 @@ async function router() {
       break;
     case "topleft":
       display.textContent = "Topleft";
-      render.renderTopLeft(repos);
+      render.renderTopLeft();
       console.log(hash);
       break;
     case "topright":
       display.textContent = "Topright";
-      render.renderTopRight(repos);
+      render.renderTopRight();
       console.log(hash);
       break;
     case "bottomleft":
       display.textContent = "Bottomleft";
       console.log(hash);
       break;
-    case "bottomleft":
-      display.textContent = "Bottomleft";
+    case "bottomright":
+      display.textContent = "Bottomright";
       console.log(hash);
       break;
   }
