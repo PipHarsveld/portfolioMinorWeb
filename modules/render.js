@@ -280,8 +280,11 @@ async function renderDetailBook() {
 
   const book = document.querySelector(".book");
   const title = document.createElement("p");
-  title.textContent = repos.name;
+  const description = document.createElement("p");
+  title.textContent = repos[0].name;
+  description.textContent = repos[0].description;
   book.appendChild(title);
+  book.appendChild(description);
 
 }
 
