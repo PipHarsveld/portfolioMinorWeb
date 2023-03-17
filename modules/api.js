@@ -1,3 +1,6 @@
+const display = document.querySelector("main");
+
+
 // Function to get all github repos
 async function getRepositories() {
     try {
@@ -19,6 +22,7 @@ async function getRepositories() {
       }
     } catch (error) {
       console.log(error);
+      display.textContent = "We couldn't get the data, please check your internet connection and try again";
     }
   }
 
@@ -38,6 +42,7 @@ async function getUserInfo() {
     }
   } catch (error) {
     console.log(error);
+    display.textContent = "We couldn't get the data, please check your internet connection and try again";
   }
 }
 
