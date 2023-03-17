@@ -86,7 +86,7 @@ body{
 body::before{
   content: "";
   background-color: var(--color-floor);
-  height: 10vh;
+  height: 7rem;
   width: 100%;
   position: absolute;
   bottom: 0;
