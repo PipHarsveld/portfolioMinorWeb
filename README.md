@@ -1,6 +1,8 @@
 # Portfolio website for the minor Webdesign and Development
+<img src="https://user-images.githubusercontent.com/54938035/225910270-6ec290a3-5056-4edc-89cc-5955f1ed7ed2.png" alt="screenshot mobile" height="500px">
+<img src="https://user-images.githubusercontent.com/54938035/225910356-f6babe95-f900-4536-aa14-2ed76dcf84b8.png" alt="screenshot mobile" height="500px">
 
-![Screenshot of the portfoliosite]()
+
 
 ## :card_file_box:Table of contents
 * [User story](#busts_in_silhouetteuser-story)
