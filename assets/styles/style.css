@@ -858,7 +858,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   height: 55%;
   width: 70%;
   position: absolute;
-  background-color: var(--color-blue);
+  background-color: var(--color-yellow);
   border-radius: .5rem;
 }
 
