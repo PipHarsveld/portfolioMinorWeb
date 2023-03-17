@@ -214,8 +214,9 @@ async function renderBottomRight() {
     const container = document.querySelector(".bottomRight>section:first-of-type>div");
     // Loop through each repository and create a new article element
     repos.forEach((repo, index) => {
-      const name = document.createElement("p");
+      const name = document.createElement("a");
       name.textContent = repo.name;
+      name.href = "#detailBook";
       if (index < 5) {
         // display the first 5 repositories
         container.appendChild(name);
