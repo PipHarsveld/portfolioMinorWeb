@@ -687,7 +687,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 
 /* Shelf 5, repos */
 /******************/
-.bottomLeft>section:nth-of-type(2)>div{
+.bottomLeft>section:nth-of-type(2)>div:first-of-type{
   height: 100%;
 }
 
@@ -741,4 +741,85 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   height: 100%;
   border-radius: .3rem;
   padding: .3rem 0;
+}
+
+
+/* Shelf 4, repos */
+/******************/
+.bottomRight>section:first-of-type>div:first-of-type{
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+}
+
+.bottomRight>section:first-of-type>div>p {
+  width: fit-content;
+  padding: .1rem .7rem;
+  border-radius: 0 .3rem .3rem 0;
+  margin-bottom: .1rem;
+  font-size: 1.6rem;
+}
+
+.bottomRight>section:first-of-type>div>p:first-of-type,
+.bottomRight>section:first-of-type>div>p:nth-of-type(5) {
+  background-color: var(--color-yellow);
+}
+
+.bottomRight>section:first-of-type>div>p:nth-of-type(2) {
+  background-color: var(--color-pink);
+}
+
+.bottomRight>section:first-of-type>div>p:nth-of-type(3) {
+  background-color: var(--color-blue);
+  transform: rotate(-10deg);
+  margin-top: .9rem;
+  margin-bottom: 1.5rem;
+}
+
+.bottomRight>section:first-of-type>div>p:nth-of-type(4) {
+  background-color: var(--color-green);
+}
+
+
+
+
+/* Shelf 6, contact */
+/********************/
+.bottomRight>section:nth-of-type(2) {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bottomRight>section:nth-of-type(2)>section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scale: 1.8;
+  transform: translateY(-1.2rem);
+}
+
+/* Icons */
+.bottomRight>section:nth-of-type(2)>section>img,
+.bottomRight>section:nth-of-type(2)>section>div>img {
+  width: 2.7rem;
+  padding: .5rem;
+  border-radius: .3rem;
+}
+
+.bottomRight>section:nth-of-type(2)>section>div {
+  display: flex;
+}
+
+.bottomRight>section:nth-of-type(2)>section>img {
+  background-color: var(--color-blue);
+}
+
+.bottomRight>section:nth-of-type(2)>section>div>img:first-of-type {
+  background-color: var(--color-green);
+  margin-right: .2rem;
+}
+
+.bottomRight>section:nth-of-type(2)>section>div>img:nth-of-type(2) {
+  background-color: var(--color-pink);
 }

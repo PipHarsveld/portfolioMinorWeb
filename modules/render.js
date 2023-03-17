@@ -137,11 +137,12 @@ async function renderBottomLeft() {
   container.innerHTML = `
     <div class="bottomLeft">
       <section>
-        <div></div>
+        <div class="foreground"></div>
       </section>
 
       <section>
-        <div></div>
+      <div></div>
+        <div class="foreground"></div>
       </section>
     </div>
   `;
@@ -149,7 +150,7 @@ async function renderBottomLeft() {
   const repos = await api.getRepositories(); // add this line to get the repositories
 
   const info = await api.getUserInfo();
-  const container2 = document.querySelector("div>section:nth-of-type(1)");
+  const container2 = document.querySelector("div>section:first-of-type");
   const image = document.createElement("img");
   const pictureFrame = document.createElement("div");
   image.src = info.avatar;
@@ -186,6 +187,7 @@ async function renderBottomRight() {
     <div class="bottomRight">
       <section>
         <div></div>
+        <div class="foreground"></div>
       </section>
 
       <section>
@@ -197,7 +199,7 @@ async function renderBottomRight() {
           </div>
         </section>
 
-        <div></div>
+        <div class="foreground"></div>
       </section>
     </div>
   `;
@@ -209,7 +211,7 @@ async function renderBottomRight() {
     display.textContent = "Something went wrong, please reload the page!";
     return false;
   } else {
-    const container = document.querySelector(".bottomRight>section:nth-of-type(2)>div");
+    const container = document.querySelector(".bottomRight>section:first-of-type>div");
     // Loop through each repository and create a new article element
     repos.forEach((repo, index) => {
       const name = document.createElement("p");
