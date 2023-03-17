@@ -192,10 +192,10 @@ async function renderBottomRight() {
 
       <section>
         <section>
-          <img src="./assets/images/linkedin.png" alt="Check my LinkedIn!">
+          <a href="https://nl.linkedin.com/in/pip-harsveld-3ab4ba193" target="_blank"><img src="./assets/images/linkedin.png" alt="Check my LinkedIn!"></a>
           <div>
-            <img src="./assets/images/mail.png" alt="Mail me!">
-            <img src="./assets/images/telephone.png" alt="Call me!">
+          <a href="mailto:pip.harsveld@outlook.com"><img src="./assets/images/mail.png" alt="Mail me!"></a>
+          <a href="tel:+31633007686"><img src="./assets/images/telephone.png" alt="Call me!"></a>
           </div>
         </section>
 

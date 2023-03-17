@@ -800,8 +800,8 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 }
 
 /* Icons */
-.bottomRight>section:nth-of-type(2)>section>img,
-.bottomRight>section:nth-of-type(2)>section>div>img {
+.bottomRight>section:nth-of-type(2)>section>a>img,
+.bottomRight>section:nth-of-type(2)>section>div>a>img {
   width: 2.7rem;
   padding: .5rem;
   border-radius: .3rem;
@@ -811,15 +811,15 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   display: flex;
 }
 
-.bottomRight>section:nth-of-type(2)>section>img {
+.bottomRight>section:nth-of-type(2)>section>a>img {
   background-color: var(--color-blue);
 }
 
-.bottomRight>section:nth-of-type(2)>section>div>img:first-of-type {
+.bottomRight>section:nth-of-type(2)>section>div>a>img:first-of-type {
   background-color: var(--color-green);
   margin-right: .2rem;
 }
 
-.bottomRight>section:nth-of-type(2)>section>div>img:nth-of-type(2) {
+.bottomRight>section:nth-of-type(2)>section>div>a:nth-of-type(2)>img {
   background-color: var(--color-pink);
 }
