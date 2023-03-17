@@ -68,6 +68,15 @@ a{
 }
 
 
+main{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding-bottom: 2.9rem;
+  align-items: flex-end;
+}
+
+
 
 /************/
 /* Bookcase */
@@ -76,8 +85,6 @@ nav {
   background-color: var(--color-bookcase);
   height: 38rem;
   width: 25rem;
-  margin: auto;
-  margin-top: 10vh;
   border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -824,4 +831,13 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 
 .bottomRight>section:nth-of-type(2)>section>div>a:nth-of-type(2)>img {
   background-color: var(--color-pink);
+}
+
+
+
+
+
+.book{
+  height: 80%;
+  width: 80%;
 }
