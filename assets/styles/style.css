@@ -62,6 +62,7 @@ a{
   --color-blue: #C7DBF3;
   --color-green: #CEE29D;
   --color-yellow: #FDDF7D;
+  --color-grey: #B7B0B7;
   --color-wallpaper: #E3CFE5;
   --color-floor: #966A61;
   --color-white: #FFFFFF;
@@ -858,8 +859,9 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   height: 55%;
   width: 70%;
   position: absolute;
-  background-color: var(--color-yellow);
+  background-color: var(--color-blue);
   border-radius: .5rem;
+  box-shadow: 1rem -1rem 0 var(--color-grey);
 }
 
 .book>p{
