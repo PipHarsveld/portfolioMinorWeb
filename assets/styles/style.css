@@ -454,7 +454,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 /************************/
 /* Styling page TopLeft */
 /************************/
-.topLeft, .topRight{
+.topLeft, .topRight, .bottomLeft, .bottomRight{
   background-color: var(--color-bookcase);
   height: 100vh;
   width: 100vw;
@@ -469,7 +469,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 
 /* Shelfs */
 /**********/
-.topLeft>section, .topRight>section {
+.topLeft>section, .topRight>section, .bottomLeft>section, .bottomRight>section {
   background-color: var(--color-shelf-background);
   height: 16rem;
   width: 16rem;
@@ -528,7 +528,7 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   background-color: var(--color-beige);
   height: 60%;
   width: fit-content;
-  padding: .5rem;
+  padding: 1rem;
   position: absolute;
   bottom: -.15rem;
   left: 2rem;
@@ -646,8 +646,8 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 }
 
 
-/* Shelf 4 and 5, repos */
-/************************/
+/* Shelf 4, repos */
+/******************/
 .topRight>section:nth-of-type(2)>section{
   height: 100%;
   width: 100%;
@@ -661,7 +661,6 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   margin-bottom: .1rem;
   font-size: 1.6rem;
 }
-
 
 .topRight>section:nth-of-type(2)>section>p:first-of-type,
 .topRight>section:nth-of-type(2)>section>p:nth-of-type(5) {
@@ -681,4 +680,65 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 
 .topRight>section:nth-of-type(2)>section>p:nth-of-type(4) {
   background-color: var(--color-green);
+}
+
+
+
+
+/* Shelf 5, repos */
+/******************/
+.bottomLeft>section:nth-of-type(2)>div{
+  height: 100%;
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section{
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section>p {
+  width: fit-content;
+  padding: .1rem .7rem;
+  border-radius: 0 .3rem .3rem 0;
+  margin-bottom: .1rem;
+  font-size: 1.6rem;
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section>p:first-of-type,
+.bottomLeft>section:nth-of-type(2)>div>section>p:nth-of-type(5) {
+  background-color: var(--color-yellow);
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section>p:nth-of-type(2) {
+  background-color: var(--color-pink);
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section>p:nth-of-type(3) {
+  background-color: var(--color-blue);
+}
+
+.bottomLeft>section:nth-of-type(2)>div>section>p:nth-of-type(4) {
+  background-color: var(--color-green);
+}
+
+/* Shelf 3, photo */
+/******************/
+.bottomLeft>section:nth-of-type(1)>div:nth-of-type(2) {
+  background-color: var(--color-beige);
+  height: 60%;
+  width: fit-content;
+  padding: 1rem;
+  position: absolute;
+  bottom: -.15rem;
+  left: 2rem;
+  transform: skew(4deg);
+  border-radius: .3rem;
+}
+
+.bottomLeft>section:nth-of-type(1)>div:nth-of-type(2)>img {
+  background-color: var(--color-white);
+  height: 100%;
+  border-radius: .3rem;
+  padding: .3rem 0;
 }

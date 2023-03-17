@@ -133,6 +133,7 @@ async function renderBottomLeft() {
   // Remove loading state
   display.textContent = "";
   const container = document.querySelector("main");
+  const section = document.createElement("section");
   container.innerHTML = `
     <div class="bottomLeft">
       <section>
@@ -148,6 +149,14 @@ async function renderBottomLeft() {
   const repos = await api.getRepositories(); // add this line to get the repositories
 
   const info = await api.getUserInfo();
+  const container2 = document.querySelector("div>section:nth-of-type(1)");
+  const image = document.createElement("img");
+  const pictureFrame = document.createElement("div");
+  image.src = info.avatar;
+  pictureFrame.appendChild(image);
+  container2.appendChild(pictureFrame);
+
+
   if (info === "error") {
     display.textContent = "Something went wrong, please reload the page!";
     return false;
@@ -161,7 +170,8 @@ async function renderBottomLeft() {
         // do nothing when index is lower than 5
       } else {
         // display the last 4 repositories
-        container.appendChild(name);
+        section.appendChild(name);
+        container.appendChild(section);
       }
     });
   }
