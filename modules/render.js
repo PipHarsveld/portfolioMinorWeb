@@ -104,7 +104,7 @@ async function renderTopRight() {
     </div>
   `;
 
-  const repos = await api.getRepositories(); // add this line to get the repositories
+  const repos = await api.getRepositories();
 
   const info = await api.getUserInfo();
   if (info === "error") {
@@ -147,7 +147,7 @@ async function renderBottomLeft() {
     </div>
   `;
 
-  const repos = await api.getRepositories(); // add this line to get the repositories
+  const repos = await api.getRepositories();
 
   const info = await api.getUserInfo();
   const container2 = document.querySelector("div>section:first-of-type");
@@ -204,7 +204,7 @@ async function renderBottomRight() {
     </div>
   `;
 
-  const repos = await api.getRepositories(); // add this line to get the repositories
+  const repos = await api.getRepositories();
 
   const info = await api.getUserInfo();
   if (info === "error") {
@@ -216,7 +216,7 @@ async function renderBottomRight() {
     repos.forEach((repo, index) => {
       const name = document.createElement("a");
       name.textContent = repo.name;
-      name.href = "#detailBook";
+      name.href = "#detailbook";
       if (index < 5) {
         // display the first 5 repositories
         container.appendChild(name);
@@ -227,10 +227,69 @@ async function renderBottomRight() {
   }
 }
 
+
+
+async function renderDetailBook() {
+  // Remove loading state
+  display.textContent = "";
+  const container = document.querySelector("main");
+  container.innerHTML = `
+    <div class="bottomRight">
+      <section>
+        <div></div>
+        <div class="foreground"></div>
+      </section>
+
+      <section>
+        <section>
+          <a><img src="./assets/images/linkedin.png" alt="Check my LinkedIn!"></a>
+          <div>
+          <a><img src="./assets/images/mail.png" alt="Mail me!"></a>
+          <a><img src="./assets/images/telephone.png" alt="Call me!"></a>
+          </div>
+        </section>
+        <div class="foreground"></div>
+      </section>
+
+      <section class="book">
+      </section>
+    </div>
+  `;
+
+
+
+  const repos = await api.getRepositories();
+  const info = await api.getUserInfo();
+  if (info === "error") {
+    display.textContent = "Something went wrong, please wait a minute and reload the page!";
+    return false;
+  } else {
+    const container = document.querySelector(".bottomRight>section:first-of-type>div");
+    // Loop through each repository and create a new article element
+    repos.forEach((repo, index) => {
+      const name = document.createElement("a");
+      name.textContent = repo.name;
+      if (index < 5) {
+        // display the first 5 repositories
+        container.appendChild(name);
+      } else {
+        // do nothing when index is greater than or equal to 5
+      }
+    });
+  }
+
+  const book = document.querySelector(".book");
+  const title = document.createElement("p");
+  title.textContent = repos.name;
+  book.appendChild(title);
+
+}
+
 export default {
   renderHome,
   renderTopLeft,
   renderTopRight,
   renderBottomLeft,
   renderBottomRight,
+  renderDetailBook,
 };

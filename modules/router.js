@@ -34,6 +34,11 @@ async function router() {
       render.renderBottomRight();
       console.log(hash);
       break;
+      case "detailbook":
+      display.textContent = "Details";
+      render.renderDetailBook();
+      console.log(hash);
+      break;
   }
 }
 
