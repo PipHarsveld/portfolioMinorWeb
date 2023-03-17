@@ -23,7 +23,7 @@ git clone https://github.com/PipHarsveld/portfolioMinorWeb/
 Congrats, you are now all set! Start your liveserver and enjoy!
 
 ## :bulb:Api
-I used the Github API for this project.
+I used the Github API for this project, which is a RESTful API that allows developers to programmatically interact with GitHub repositories and services. It provides a wide range of endpoints that allow developers to retrieve and manipulate data such as repositories, issues, pull requests, user profiles, and more. 
 
 ## :technologist:Author
 This project is designed and created by [Pip Harsveld](https://github.com/PipHarsveld) for the second projectweek in the minor Webdesign and Development.
