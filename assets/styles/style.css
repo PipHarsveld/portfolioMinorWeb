@@ -468,10 +468,6 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   nav>div:nth-of-type(2) {
     left: 20rem;
   }
-
-  body::before{
-    height: 20vh;
-  }
 }
 
 
