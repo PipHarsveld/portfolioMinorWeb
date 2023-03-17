@@ -62,7 +62,8 @@ a{
   --color-blue: #C7DBF3;
   --color-green: #CEE29D;
   --color-yellow: #FDDF7D;
-  --color-text: #B7B0B7;
+  --color-wallpaper: #E3CFE5;
+  --color-floor: #966A61;
   --color-white: #FFFFFF;
   --color-beige: #F8E9C7;
 }
@@ -72,10 +73,24 @@ main{
   display: flex;
   height: 100vh;
   justify-content: center;
-  padding-bottom: 2.9rem;
+  padding-bottom: 7.8rem;
   align-items: flex-end;
+  z-index: 3;
+  position: relative;
 }
 
+body{
+  background-color: var(--color-wallpaper);
+}
+
+body::before{
+  content: "";
+  background-color: var(--color-floor);
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 
 
 /************/
@@ -471,12 +486,14 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 6%;
   padding: 2rem;
+  justify-items: center;
+  align-items:center;
 }
 
 
 /* Shelfs */
 /**********/
-.topLeft>section, .topRight>section, .bottomLeft>section, .bottomRight>section {
+.topLeft>section, .topRight>section, .bottomLeft>section, .bottomRight>section:first-of-type, .bottomRight>section:nth-of-type(2) {
   background-color: var(--color-shelf-background);
   height: 16rem;
   width: 16rem;
@@ -840,4 +857,6 @@ nav>a:nth-of-type(6)>section>div>img:nth-of-type(2) {
 .book{
   height: 80%;
   width: 80%;
+  position: absolute;
+  background-color: var(--color-blue);
 }
